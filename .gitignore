@@ -1,9 +1,19 @@
+# IDEs and editors
 .vscode/
-.venv3?/
+.idea/
 *.sublime-project
 *.sublime-workspace
+
+# Environment
 .env*
+.Python
+env/
+.venv3?/
+
+# Operating system files
 .DS_Store
+
+# Project-specific files
 concurrency/flags/img/*.gif
 concurrency/charfinder/charfinder_index.pickle
 18-asyncio/charfinder/charfinder_index.pickle
@@ -12,7 +22,7 @@ concurrency/wikipedia/fixture/docroot/
 17-futures/countries/flags/
 attic/futures/countries/flags/
 
-# Byte-compiled / optimized / DLL files
+# Python bytecode
 __pycache__/
 *.py[cod]
 
@@ -23,8 +33,6 @@ __pycache__/
 *.class
 
 # Distribution / packaging
-.Python
-env/
 build/
 develop-eggs/
 dist/
@@ -40,8 +48,8 @@ var/
 *.egg
 
 # PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+# Usually these files are written by a python script from a template
+# before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
 
@@ -61,7 +69,7 @@ coverage.xml
 *.mo
 *.pot
 
-# Django stuff:
+# Django stuff
 *.log
 
 # Sphinx documentation
@@ -69,6 +77,3 @@ docs/_build/
 
 # PyBuilder
 target/
-
-# PyCharm
-.idea/
