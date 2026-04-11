@@ -2,15 +2,15 @@
 # -*- coding: utf-8 -*-
 
 import logging
+from ../logger/logger_my import get_logger
 from frenchdeck import FrenchDeck, Card
 import random
 
 # 配置日志
-logging.basicConfig(
-    filename='../logs/frenchdeck.log',
-    level=logging.DEBUG,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S'
+logger = get_logger(
+    name='frenchdeck',
+    log_file='../logs/frenchdeck.log',
+    level=logging.DEBUG
 )
 
 def main():
@@ -18,33 +18,33 @@ def main():
     deck = FrenchDeck()
     
     # 测试__len__方法
-    logging.info("Deck length: {}".format(len(deck)))
+    logger.info("Deck length: {}".format(len(deck)))
     
     # 测试__getitem__方法 - 通过索引访问
-    logging.info("First card: {}".format(deck[0]))
-    logging.info("Last card: {}".format(deck[-1]))
-    logging.info("Random card: {}".format(deck[10]))
+    logger.info("First card: {}".format(deck[0]))
+    logger.info("Last card: {}".format(deck[-1]))
+    logger.info("Random card: {}".format(deck[10]))
     
     # 测试随机抽取牌
-    logging.info("Random card (using random.choice): {}".format(random.choice(deck)))
+    logger.info("Random card (using random.choice): {}".format(random.choice(deck)))
     
     # 测试切片
-    logging.info("First three cards:")
+    logger.info("First three cards:")
     for card in deck[:3]:
-        logging.info("  {}".format(card))
+        logger.info("  {}".format(card))
     
     # 测试迭代
-    logging.info("\nSome cards:")
+    logger.info("\nSome cards:")
     for card in deck[:5]:
-        logging.info("  {}".format(card))
+        logger.info("  {}".format(card))
     
     # 测试in操作符
-    logging.info("\nChecking if Card('Q', 'hearts') is in deck:")
-    logging.info(Card('Q', 'hearts') in deck)
-    logging.info("Checking if Card('7', 'beasts') is in deck:")
-    logging.info(Card('7', 'beasts') in deck)
+    logger.info("\nChecking if Card('Q', 'hearts') is in deck:")
+    logger.info(Card('Q', 'hearts') in deck)
+    logger.info("Checking if Card('7', 'beasts') is in deck:")
+    logger.info(Card('7', 'beasts') in deck)
 
 
 if __name__ == '__main__':
     main()
-    logging.info("Test completed successfully")
+    logger.info("Test completed successfully")
