@@ -1,0 +1,22 @@
+2026-04-11 12:53:18 - INFO - Deck length: 52
+2026-04-11 12:53:18 - INFO - First card: Card(rank='2', suit='spades')
+2026-04-11 12:53:18 - INFO - Last card: Card(rank='A', suit='hearts')
+2026-04-11 12:53:18 - INFO - Random card: Card(rank='Q', suit='spades')
+2026-04-11 12:53:18 - INFO - Random card (using random.choice): Card(rank='9', suit='clubs')
+2026-04-11 12:53:18 - INFO - First three cards:
+2026-04-11 12:53:18 - INFO -   Card(rank='2', suit='spades')
+2026-04-11 12:53:18 - INFO -   Card(rank='3', suit='spades')
+2026-04-11 12:53:18 - INFO -   Card(rank='4', suit='spades')
+2026-04-11 12:53:18 - INFO - 
+Some cards:
+2026-04-11 12:53:18 - INFO -   Card(rank='2', suit='spades')
+2026-04-11 12:53:18 - INFO -   Card(rank='3', suit='spades')
+2026-04-11 12:53:18 - INFO -   Card(rank='4', suit='spades')
+2026-04-11 12:53:18 - INFO -   Card(rank='5', suit='spades')
+2026-04-11 12:53:18 - INFO -   Card(rank='6', suit='spades')
+2026-04-11 12:53:18 - INFO - 
+Checking if Card('Q', 'hearts') is in deck:
+2026-04-11 12:53:18 - INFO - True
+2026-04-11 12:53:18 - INFO - Checking if Card('7', 'beasts') is in deck:
+2026-04-11 12:53:18 - INFO - False
+2026-04-11 12:53:18 - INFO - Test completed successfully
