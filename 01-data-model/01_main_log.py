@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import logging
-from ../logger/logger_my import get_logger
+from ..logger.logger_my import get_logger
 from frenchdeck import FrenchDeck, Card
 import random
 
