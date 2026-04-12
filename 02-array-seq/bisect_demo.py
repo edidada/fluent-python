@@ -14,7 +14,6 @@ def demo(bisect_fn):
         print(ROW_FMT.format(needle, position, offset))  # <3>
 
 if __name__ == '__main__':
-
     if sys.argv[-1] == 'left':    # <4>
         bisect_fn = bisect.bisect_left
     else:
