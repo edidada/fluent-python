@@ -74,3 +74,4 @@ docs/_build/
 
 # PyBuilder
 target/
+.codex
