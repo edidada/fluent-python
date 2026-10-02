@@ -40,3 +40,29 @@ jobs:
         poetry run python frenchdeck.py
         poetry run python vector2d.py
         poetry run python -m doctest frenchdeck.doctest
+    - name: Run remaining chapter examples
+      run: |
+        poetry run python 02-array-seq/bisect_demo.py
+        poetry run python 03-dict-set/strkeydict.py
+        poetry run python 04-text-byte/numerics_demo.py
+        poetry run python 05-1class-func/tagger.py
+        poetry run python 06-dp-1class-func/strategy.py
+        poetry run python 07-closure-deco/registration.py
+        poetry run python 08-obj-ref/twilight_bus.py
+        poetry run python 09-pythonic-obj/vector2d_v3.py
+        poetry run python 10-seq-hacking/vector_v5.py
+        poetry run python 11-iface-abc/bingo.py
+        poetry run python 12-inheritance/diamond.py
+        poetry run python 13-op-overloading/vector_v8.py
+        pushd 14-it-generator
+        poetry run python sentence_runner.py
+        popd
+        poetry run python 15-context-mngr/mirror.py
+        poetry run python 16-coroutine/coroaverager3.py
+        poetry run python 17-futures/crypto/arcfour_test.py
+        poetry run python 17-futures-py3.7/demo_executor_map.py
+        poetry run python 18-asyncio/spinner_thread.py
+        poetry run python 18-asyncio-py3.7/spinner_thread.py
+        poetry run python 19-dyn-attr-prop/blackknight.py
+        poetry run python 20-descriptor/descriptorkinds_dump.py
+        poetry run python 21-class-metaprog/evaltime.py
