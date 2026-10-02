@@ -2,7 +2,10 @@ import sys
 import time
 from concurrent import futures
 from random import randrange
-from arcfour import arcfour
+try:
+    from .arcfour import arcfour
+except ImportError:  # Support direct execution as a script.
+    from arcfour import arcfour
 
 JOBS = 12
 SIZE = 2**18

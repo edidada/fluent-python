@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from frenchdeck import FrenchDeck, Card
+try:
+    from .frenchdeck import FrenchDeck, Card
+except ImportError:  # Support direct execution as a script.
+    from frenchdeck import FrenchDeck, Card
 import random
 
 def main():

@@ -9,7 +9,10 @@ import logging
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from logger.logger_my import get_logger
-from frenchdeck import FrenchDeck, Card
+try:
+    from .frenchdeck import FrenchDeck, Card
+except ImportError:  # Support direct execution as a script.
+    from frenchdeck import FrenchDeck, Card
 import random
 
 # 配置日志

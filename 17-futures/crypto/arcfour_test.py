@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
-from arcfour import arcfour
+try:
+    from .arcfour import arcfour
+except ImportError:  # Support direct execution as a script.
+    from arcfour import arcfour
 
 '''
 Source of the test vectors:
@@ -109,11 +112,16 @@ TEST_VECTORS = [
     ),
 ]
 
-for name, vectors in TEST_VECTORS:
-    print(name, end='')
-    plain = bytearray(vectors['Plain Text'])
-    cipher = bytearray(vectors['Cipher Text'])
-    key = bytearray(vectors['Key'])
-    assert cipher == arcfour(key, plain, loops=1)
-    assert plain == arcfour(key, cipher, loops=1)
-    print(' --> OK')
+def main():
+    for name, vectors in TEST_VECTORS:
+        print(name, end='')
+        plain = bytearray(vectors['Plain Text'])
+        cipher = bytearray(vectors['Cipher Text'])
+        key = bytearray(vectors['Key'])
+        assert cipher == arcfour(key, plain, loops=1)
+        assert plain == arcfour(key, cipher, loops=1)
+        print(' --> OK')
+
+
+if __name__ == '__main__':
+    main()

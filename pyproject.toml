@@ -4,7 +4,15 @@ version = "0.1.0"
 description = "Fluent Python examples"
 authors = ["someXXYY <betaXXX@gmail.com>"]
 readme = "README.md"
-packages = [{ include = "18-asyncio" }, { include = "18-asyncio-py3.7" }, { include = "17-futures" }, { include = "14-it-generator" }]
+packages = [
+    { include = "01-data-model" },
+    { include = "fluent_python" },
+    { include = "logger" },
+    { include = "14-it-generator" },
+    { include = "17-futures" },
+    { include = "18-asyncio" },
+    { include = "18-asyncio-py3.7" },
+]
 
 [tool.poetry.dependencies]
 python = ">=3.11,<4.0"
@@ -15,6 +23,8 @@ pytest = ">=8.0.0"
 black = ">=23.0.0"
 
 [tool.poetry.scripts]
+frenchdeck-demo = "01-data-model.01_main:main"
+frenchdeck-log-demo = "01-data-model.01_main_log:main"
 spinner-thread = "18-asyncio.spinner_thread:main"
 spinner-curio = "18-asyncio.spinner_curio:main"
 spinner-await = "18-asyncio.spinner_await:main"
@@ -22,12 +32,14 @@ spinner-asyncio = "18-asyncio.spinner_asyncio:main"
 tcp-charfinder = "18-asyncio.charfinder.tcp_charfinder:main"
 http-charfinder = "18-asyncio.charfinder.http_charfinder:main"
 charfinder = "18-asyncio.charfinder.charfinder:main"
-spinner-thread-py37 = "18-asyncio-py3.7.spinner_thread:main"
-spinner-asyncio-py37 = "18-asyncio-py3.7.spinner_asyncio:main"
-countdown = "18-asyncio-py3.7.countdown:main"
-tcp-charfinder-py37 = "18-asyncio-py3.7.charfinder.tcp_charfinder:main"
-charfinder-py37 = "18-asyncio-py3.7.charfinder.charfinder:main"
+spinner-thread-py37 = "fluent_python.legacy_entrypoints:spinner_thread_py37"
+spinner-asyncio-py37 = "fluent_python.legacy_entrypoints:spinner_asyncio_py37"
+countdown = "fluent_python.legacy_entrypoints:countdown_py37"
+tcp-charfinder-py37 = "fluent_python.legacy_entrypoints:tcp_charfinder_py37"
+charfinder-py37 = "fluent_python.legacy_entrypoints:charfinder_py37"
 arcfour-test = "17-futures.crypto.arcfour_test:main"
+sha-futures = "17-futures.crypto.sha_futures:main"
+arcfour-futures = "17-futures.crypto.arcfour_futures:main"
 subfield = "14-it-generator.isis2json.subfield:main"
 iso2709 = "14-it-generator.isis2json.iso2709:main"
 isis2json = "14-it-generator.isis2json.isis2json:main"
