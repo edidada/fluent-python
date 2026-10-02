@@ -62,6 +62,7 @@ jobs:
         poetry run python 17-futures/crypto/arcfour_test.py
         poetry run python 17-futures-py3.7/demo_executor_map.py
         poetry run python 18-asyncio/spinner_thread.py
+        poetry run python 18-asyncio/spinner_asyncio.py
         poetry run python 18-asyncio-py3.7/spinner_thread.py
         poetry run python 19-dyn-attr-prop/blackknight.py
         poetry run python 20-descriptor/descriptorkinds_dump.py
