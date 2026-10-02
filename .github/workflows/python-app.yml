@@ -34,3 +34,9 @@ jobs:
       run: |
         poetry run flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         poetry run flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Run Chapter 1 data model examples
+      working-directory: 01-data-model
+      run: |
+        poetry run python frenchdeck.py
+        poetry run python vector2d.py
+        poetry run python -m doctest frenchdeck.doctest
