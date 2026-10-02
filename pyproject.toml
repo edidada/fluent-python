@@ -8,6 +8,7 @@ packages = [{ include = "18-asyncio" }, { include = "18-asyncio-py3.7" }, { incl
 
 [tool.poetry.dependencies]
 python = ">=3.11,<4.0"
+curio = "^1.6"
 
 [tool.poetry.group.dev.dependencies]
 pytest = ">=8.0.0"
